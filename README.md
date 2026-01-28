@@ -3,6 +3,7 @@
 This agent showcases an ai guided market maker on Manifest, Solana's CLOB DEX. The agent guides the user to setup basic two-sided quotes on Manifest markets.
 
 <img width="799" height="694" alt="image" src="https://github.com/user-attachments/assets/17b99d12-7fd6-4bc5-b8a5-89f5816a7bf2" />
+
 ## Supported DEXs
 -Orca:
  - orcaOpenCenteredPositionWithLiquidity
