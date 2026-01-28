@@ -1,58 +1,60 @@
-# Dynamic NFT Metadata Generator for Solana
+# AI Guided Market Making Agent
 
+This agent showcases an ai guided market maker on Manifest, Solana's CLOB DEX. The agent guides the user to setup basic two-sided quotes on Manifest markets.
+[Reference](https://github.com/CKS-Systems/manifest)
 
-A powerful serverless API for generating dynamic NFT metadata and images on the Solana blockchain. This project provides a scalable solution for creating and managing NFT metadata with real-time updates and customization options.
+## Cloning example
 
+To clone the repository, run the following command:
 
-## contacts
-- [telegram](https://t.me/caterpillardev)
-- [twitter](https://x.com/caterpillardev)
-
-
-
-## Features
-
-- **Dynamic Metadata Generation**: Generate and update NFT metadata on-the-fly
-- **Image Generation**: Create custom NFT images with text and URI support
-- **Event Ticket Support**: Specialized metadata generation for event tickets
-- **Caching System**: Optimized performance with API Gateway caching
-- **Multi-Cluster Support**: Compatible with different Solana clusters
-- **TypeScript Support**: Built with type safety and modern development practices
-
-##  API Endpoints
-
-### Image Generation
-
-- `GET /img/{mintId}`: Generate NFT image with custom parameters
-- `GET /img`: Base image generation endpoint
-
-### Metadata Generation
-
-- `GET /metadata/{mintId}`: Generate NFT metadata with custom parameters
-- `GET /metadata`: Base metadata generation endpoint
-
-## Configuration
-
-The project uses Serverless Framework for deployment and configuration. Key configuration files:
-
-- `serverless.yml`: Main configuration file
-- `tsconfig.json`: TypeScript configuration
-- `.eslintrc.js`: ESLint configuration
-
-## Project Structure
-
-```
-api/
-├── img-generator/     # Image generation logic
-├── metadata-generator/# Metadata generation logic
-├── common/           # Shared utilities
-├── idls/            # Interface definitions
-└── serverless.yml   # Serverless configuration
+```bash
+npx gitpick sendaifun/solana-agent-kit/examples/defi/market-making-agent
 ```
 
-## Security
+## Key Features
 
-- API Gateway caching with configurable TTL
-- Environment variable management
-- CORS support
-- Binary media type handling
+- **Automated Quoting**: The agent automatically refreshes quotes on an interval.
+- **Reducing Complexity**: Designed to abstract away parameters for setting up market making.
+- **Random Model**: The market making introduces randomness to prevent front running or other negative botting behaviors.
+
+
+## Example
+=== Market Maker Configuration ===
+
+Enter the market ID: 2Uj8277fkaVBtTU6Wp2GPRbQC86SkSdgQ2mp1Q5N2LHc
+Enter the base token symbol (e.g., SEND): SEND
+Enter the quote token symbol (e.g., USDC): USDC
+
+=== Quote Parameters (applies to both buy and sell sides) ===
+Enter number of quotes to place on each side: 4
+Enter minimum quote depth (% distance from mid price): 0.1
+Enter maximum quote depth (% distance from mid price): 2
+
+=== Token Allowances ===
+Enter total SEND allowance: 2
+Enter total USDC allowance: 3
+
+Enter update interval in seconds: 20
+
+=== Configuration Summary ===
+```json
+{
+  "marketId": "2Uj8277fkaVBtTU6Wp2GPRbQC86SkSdgQ2mp1Q5N2LHc",
+  "baseToken": "SEND",
+  "quoteToken": "USDC",
+  "quoteParams": {
+    "number": 4,
+    "minDepth": 0.1,
+    "maxDepth": 2
+  },
+  "allowance": {
+    "base": 2,
+    "quote": 3
+  },
+  "intervalSeconds": 20
+}
+```
+
+Is this configuration correct? (yes/no): yes
+
+Starting market maker mode for SEND/USDC...
