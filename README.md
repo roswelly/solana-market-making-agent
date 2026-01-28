@@ -10,19 +10,24 @@ This agent showcases an ai guided market maker on Manifest, Solana's CLOB DEX. T
  - orcaOpenSingleSidedPosition
  - orcaClosePosition
  - orcaCreateCLMM
+   
 -Raydium:
  - raydiumCreateAmmV4
  - raydiumCreateClmm
  - raydiumCreateCpmm
+
 -Meteora:
  - createMeteoraDlmmPool
  - createMeteoraDynamicAMMPool
+
 -OpenBook:
  - openbookCreateMarket
+
 -Drift (Perpetuals & Spot):
  - driftPerpTrade
  - swapSpotToken
  - depositIntoDriftVault
+
 -OKX DEX (Aggregator):
  - executeSwap
  - getQuote
