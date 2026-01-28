@@ -3,16 +3,28 @@
 This agent showcases an ai guided market maker on Manifest, Solana's CLOB DEX. The agent guides the user to setup basic two-sided quotes on Manifest markets.
 
 <img width="799" height="694" alt="image" src="https://github.com/user-attachments/assets/17b99d12-7fd6-4bc5-b8a5-89f5816a7bf2" />
-
-
-## Cloning example
-
-To clone the repository, run the following command:
-
-```bash
-npx gitpick sendaifun/solana-agent-kit/examples/defi/market-making-agent
-```
-
+## Supported DEXs
+-Orca:
+ - orcaOpenCenteredPositionWithLiquidity
+orcaOpenSingleSidedPosition
+orcaClosePosition
+orcaCreateCLMM
+Raydium:
+raydiumCreateAmmV4
+raydiumCreateClmm
+raydiumCreateCpmm
+Meteora:
+createMeteoraDlmmPool
+createMeteoraDynamicAMMPool
+OpenBook:
+openbookCreateMarket
+Drift (Perpetuals & Spot):
+driftPerpTrade
+swapSpotToken
+depositIntoDriftVault
+OKX DEX (Aggregator):
+executeSwap
+getQuote
 ## Key Features
 
 - **Automated Quoting**: The agent automatically refreshes quotes on an interval.
